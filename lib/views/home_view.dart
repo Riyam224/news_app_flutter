@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newwss_app_11/widgets/category_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -22,14 +23,6 @@ class HomeView extends StatelessWidget {
           ),
           backgroundColor: Colors.transparent,
         ),
-        body: Container(
-          height: 85,
-          width: 150,
-          decoration: BoxDecoration(
-            color: Colors.blue,
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: const Center(child: Text('hello')),
-        ));
+        body: CategoryCard());
   }
 }
