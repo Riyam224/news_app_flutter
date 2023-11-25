@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newwss_app_11/widgets/categories_list_view.dart';
-import 'package:newwss_app_11/widgets/news_tile.dart';
+import 'package:newwss_app_11/widgets/news_list_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -24,6 +23,6 @@ class HomeView extends StatelessWidget {
           ),
           backgroundColor: Colors.transparent,
         ),
-        body: const NewsTile());
+        body: const NewsListView());
   }
 }
