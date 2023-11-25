@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:newwss_app_11/models/category_model.dart';
 import 'package:newwss_app_11/widgets/category_card.dart';
 
 class CategoriesListView extends StatelessWidget {
   const CategoriesListView({
     super.key,
   });
+
+  final List<CategoryModel> categories = const [
+    CategoryModel(image: 'assets/technology.jpeg', categoryName: 'technology'),
+    CategoryModel(image: 'assets/technology.jpeg', categoryName: 'technology'),
+    CategoryModel(image: 'assets/technology.jpeg', categoryName: 'technology'),
+    CategoryModel(image: 'assets/technology.jpeg', categoryName: 'technology'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +21,11 @@ class CategoriesListView extends StatelessWidget {
       height: 100,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: 10,
+          itemCount: categories.length,
           itemBuilder: (context, index) {
-            return const CategoryCard();
+            return CategoryCard(
+              category: categories[index],
+            );
           }),
     );
   }
