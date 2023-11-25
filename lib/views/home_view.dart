@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newwss_app_11/widgets/categories_list_view.dart';
 import 'package:newwss_app_11/widgets/news_list_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -23,6 +24,19 @@ class HomeView extends StatelessWidget {
           ),
           backgroundColor: Colors.transparent,
         ),
-        body: const NewsListView());
+        body: const  Padding(
+          padding:  EdgeInsets.symmetric(horizontal: 18),
+          child:  Column(
+            children: [
+              CategoriesListView(),
+              SizedBox(
+                height: 32,
+              ),
+              Expanded(
+                child: NewsListView(),
+              ),
+            ],
+          ),
+        ));
   }
 }
