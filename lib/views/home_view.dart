@@ -25,29 +25,16 @@ class HomeView extends StatelessWidget {
           ),
           backgroundColor: Colors.transparent,
         ),
-        body: Padding(
-          padding:  const EdgeInsets.symmetric(horizontal: 18),
+        body:  const Padding(
+          padding:  EdgeInsets.symmetric(horizontal: 18),
           child:  CustomScrollView(
-            physics:  const BouncingScrollPhysics(),
+            physics:  BouncingScrollPhysics(),
             slivers: [
-              const SliverToBoxAdapter(child: CategoriesListView()),
-              const SliverToBoxAdapter(child: SizedBox(height: 32)),
-              SliverList(delegate: SliverChildBuilderDelegate((context, index) {
-                return const NewsTile();
-              })),
+              SliverToBoxAdapter(child: CategoriesListView()),
+              SliverToBoxAdapter(child: SizedBox(height: 32)),
+              NewsListView(),
             ],
           ),
-          // child:  Column(
-          //   children: [
-          //     CategoriesListView(),
-          //     SizedBox(
-          //       height: 32,
-          //     ),
-          //     Expanded(
-          //       child: NewsListView(),
-          //     ),
-          //   ],
-          // ),
         ));
   }
 }
